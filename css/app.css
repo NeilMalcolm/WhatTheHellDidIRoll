@@ -110,6 +110,48 @@ h1:focus {
     color: white;
 }
 
-    .blazor-error-boundary::after {
-        content: "An error has occurred."
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
+
+#details {
+    color: dimgray;
+}
+
+
+@media screen and (max-width: 1199px) {
+    #roll-card {
+        width: 100%;
     }
+
+    #roll-container {
+        height: auto;
+        margin-left: 10px;
+        margin-right: 10px;
+        gap: 0;
+        flex-wrap:wrap;
+    }
+
+    #past-rolls-card {
+        margin-top: 30px;
+        width: 100%;
+        height: 475px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #roll-card {
+
+    }
+
+    #roll-container {
+        height: 500px;
+    }
+
+    #past-rolls-card {
+        margin-left: 30px;
+        width: 450px;
+    }
+
+
+}
