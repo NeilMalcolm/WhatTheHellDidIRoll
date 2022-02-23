@@ -9,11 +9,13 @@
         <MudItem Class="d-flex flex-column"> 
             <MudItem>
                 <MudText Typo="Typo.h3" 
+                        Color="Color.Default"
                         Align="Align.Center">What the Hell did I Roll?</MudText>
 
                 <MudText Typo="Typo.h2" 
-                            Style="font-weight: bold; margin: 45px 0 40px 0;"
-                            Align="Align.Center">@_rollResultText</MudText>
+                         Color="Color.Dark"
+                         Style="font-weight: bold; margin: 45px 0 40px 0;"
+                         Align="Align.Center">@_rollResultText</MudText>
             </MudItem>
             
             <MudItem Class="d-flex align-start" Style="height:500px;">
@@ -53,6 +55,7 @@
                                     <MudItem xs="12" sm="12">
                                         <MudButton class="form-submit-button" 
                                             xs="12"
+                                            DisableElevation="true"
                                             Style="width:100%;"
                                             ButtonType="ButtonType.Submit" 
                                             Variant="Variant.Filled" 
@@ -127,8 +130,14 @@
                     </MudList>
                 </MudCard>
             </MudItem>
+            <div style="color: dimgray;">
+	            <MudText Align="Align.Center">Made in Blazor WASM, styled with <MudLink Underline="Underline.Always" Href="https://github.com/MudBlazor/MudBlazor/">MudBlazor</MudLink>.</MudText>
+	            <MudText Align="Align.Center"><MudLink Underline="Underline.Always" Href="https://github.com/NeilMalcolm/WhatTheHellDidIRoll">Code</MudLink> hosted on GitHub Pages.</MudText>
+            </div>
         </MudItem>
     </MudGrid>
+
+    
 </MudItem>
     
 @code {
