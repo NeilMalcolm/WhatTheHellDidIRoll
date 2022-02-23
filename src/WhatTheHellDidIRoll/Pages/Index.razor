@@ -135,30 +135,30 @@
     
 @code {
 
-    const string DefaultRollResultText = "<Roll Me>";
-    private string _rollResultText = DefaultRollResultText;
-    private Roll _roll = new(1, 1);
+const string DefaultRollResultText = "<Roll Me>";
+private string _rollResultText = DefaultRollResultText;
+private Roll _roll = new(1, 1);
 
-    private List<Tuple<string, Roll>> PreviousRolls { get; set; }
-        = new List<Tuple<string, Roll>>();
+private List<Tuple<string, Roll>> PreviousRolls { get; set; }
+    = new List<Tuple<string, Roll>>();
     
-    public bool IsPreviousRollsListHidden 
-        => PreviousRolls.Count == 0;
+public bool IsPreviousRollsListHidden 
+    => PreviousRolls.Count == 0;
 
-    public void HandleSubmit()
-    {
-        var newRoll = _roll.GetRoll()
-            .ToString();
+public void HandleSubmit()
+{
+    var newRoll = _roll.GetRoll()
+        .ToString();
 
-        _rollResultText = newRoll;
-        PreviousRolls.Add
-        (
-            new Tuple<string, Roll>(newRoll, new Roll (_roll.TensDice, _roll.UnitsDice))
-        );
-    }
+    _rollResultText = newRoll;
+    PreviousRolls.Add
+    (
+        new Tuple<string, Roll>(newRoll, new Roll (_roll.TensDice, _roll.UnitsDice))
+    );
+}
 
-    public void ClearPreviousRolls()
-    {
-        PreviousRolls = new List<Tuple<string, Roll>>(); 
-    }
+public void ClearPreviousRolls()
+{
+    PreviousRolls = new List<Tuple<string, Roll>>(); 
+}
 }
