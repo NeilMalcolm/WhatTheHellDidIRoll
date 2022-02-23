@@ -3,15 +3,13 @@
 
 @page "/"
 
-<PageTitle>Index</PageTitle>    
-
 <MudItem Class="d-flex align-center" Style="height:100%;">
 
     <MudGrid Class="d-flex justify-center" Spacing="0">
         <MudItem Class="d-flex flex-column"> 
             <MudItem>
                 <MudText Typo="Typo.h3" 
-                        Align="Align.Center">What the F*@@K did I Just Roll?</MudText>
+                        Align="Align.Center">What the Hell did I Roll?</MudText>
 
                 <MudText Typo="Typo.h2" 
                             Style="font-weight: bold; margin: 45px 0 40px 0;"
@@ -67,9 +65,9 @@
                         Style="margin-left: 30px; width:450px; ">
                     <MudItem Class="d-flex justify-center align-center">
                         <MudText Typo="Typo.h5" 
-                        class="mr-auto"
+                                 class="mr-auto"
                                  Align="Align.Center"
-                                 Style="Padding: 20px;">Previous Rolls</MudText>
+                                 Style="Padding: 20px;">Past Rolls</MudText>
 
                         <MudButton Variant="Variant.Text" 
                                    class="mr-2"
@@ -151,8 +149,9 @@ public void HandleSubmit()
         .ToString();
 
     _rollResultText = newRoll;
-    PreviousRolls.Add
+    PreviousRolls.Insert
     (
+        0,
         new Tuple<string, Roll>(newRoll, new Roll (_roll.TensDice, _roll.UnitsDice))
     );
 }
