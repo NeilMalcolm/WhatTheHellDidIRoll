@@ -19,6 +19,18 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
+
+
+    # publishes Blazor project to the release-folder
+    - name: Build .Lib Library
+      run: dotnet build WhatTheHellDidIRoll.Lib.csproj -c Release -o release --nologo
+      working-directory: src/WhatTheHellDidIRoll.Lib
+    
+    # publishes Blazor project to the release-folder
+    - name: Build .Lib Library
+      run: dotnet build WhatTheHellDidIRoll.Tests.csproj -c Release -o release --nologo
+      working-directory: src/WhatTheHellDidIRoll.Tests
+      
     # publishes Blazor project to the release-folder
     - name: Publish .NET Project
       run: dotnet publish src/WhatTheHellDidIRoll.sln -c Release -o release --nologo
