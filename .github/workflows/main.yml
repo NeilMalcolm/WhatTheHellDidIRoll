@@ -19,7 +19,12 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
-    # publishes Blazor project to the release-folder
+    # build Blazor solution to the release-folder
+    - name: Publish .NET Project
+      run: dotnet build WhatTheHellDidIRoll.sln -c Release -o release --nologo
+      working-directory:  src
+      
+    # publishes Blazor solution to the release-folder
     - name: Publish .NET Project
       run: dotnet publish WhatTheHellDidIRoll.sln -c Release -o release --nologo
       working-directory:  src
