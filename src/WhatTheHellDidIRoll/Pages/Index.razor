@@ -3,7 +3,7 @@
 
 @page "/"
 
-<MudItem Class="d-flex align-center" Style="height:100%;">
+<MudItem Class="d-flex align-center" xs="12" Style="height:100%;">
 
     <MudGrid Class="d-flex justify-center" Spacing="0">
         <MudItem Class="d-flex flex-column"> 
@@ -18,9 +18,9 @@
                          Align="Align.Center">@_rollResultText</MudText>
             </MudItem>
             
-            <MudItem Class="d-flex align-start" Style="height:500px;">
+            <MudItem id="roll-container" Class="d-flex align-start">
                 
-                <MudCard Elevation="2" style="width:650px;">    
+                <MudCard id="roll-card" Elevation="2" >    
                         <EditForm Model="@_roll" OnValidSubmit="@HandleSubmit">
                             <DataAnnotationsValidator />
                             <MudGrid Class="pa-6">
@@ -64,8 +64,8 @@
                             </MudGrid>
                         </EditForm>
                     </MudCard>
-                <MudCard Elevation="2" 
-                        Style="margin-left: 30px; width:450px; ">
+               <div id="past-rolls-card" >
+                    <MudCard Elevation="2">
                     <MudItem Class="d-flex justify-center align-center">
                         <MudText Typo="Typo.h5" 
                                  class="mr-auto"
@@ -129,17 +129,16 @@
                         }
                     </MudList>
                 </MudCard>
+               </div>
             </MudItem>
-            <div style="color: dimgray;">
-	            <MudText Align="Align.Center">Made in Blazor WASM, styled with <MudLink Underline="Underline.Always" Href="https://github.com/MudBlazor/MudBlazor/">MudBlazor</MudLink>.</MudText>
-	            <MudText Align="Align.Center"><MudLink Underline="Underline.Always" Href="https://github.com/NeilMalcolm/WhatTheHellDidIRoll">Code</MudLink> hosted on GitHub Pages.</MudText>
+            <div id="details">
+	          <MudText Align="Align.Center">Made in Blazor WASM, styled with <MudLink Underline="Underline.Always" Href="https://github.com/MudBlazor/MudBlazor/">MudBlazor</MudLink>.</MudText>
+	          <MudText Align="Align.Center"><MudLink Underline="Underline.Always" Href="https://github.com/NeilMalcolm/WhatTheHellDidIRoll">Code</MudLink> hosted on GitHub Pages.</MudText>
             </div>
         </MudItem>
     </MudGrid>
-
-    
 </MudItem>
-    
+
 @code {
 
 const string DefaultRollResultText = "<Roll Me>";
