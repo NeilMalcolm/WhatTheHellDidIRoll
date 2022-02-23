@@ -26,7 +26,8 @@ jobs:
   
     # .NET build
     - name: Build
-      run: dotnet test
+      run: dotnet test --no-restore 
+      working-directory: src/WhatTheHellDidIRoll.Tests
   
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
