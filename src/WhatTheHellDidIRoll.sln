@@ -5,9 +5,9 @@ VisualStudioVersion = 17.2.32210.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatTheHellDidIRoll", "WhatTheHellDidIRoll\WhatTheHellDidIRoll.csproj", "{59718114-505E-4831-B770-2BA354328676}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheHellDidIRoll.Lib", "..\..\..\Projects\WhatTheHellDidIRoll\src\WhatTheHellDidIRoll.Lib\WhatTheHellDidIRoll.Lib.csproj", "{7EAC411B-4514-4524-8632-F32D636761B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheHellDidIRoll.Lib", "WhatTheHellDidIRoll.Lib\WhatTheHellDidIRoll.Lib.csproj", "{7EAC411B-4514-4524-8632-F32D636761B9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheHellDidIRoll.Tests", "..\..\..\Projects\WhatTheHellDidIRoll\src\WhatTheHellDidIRoll.Tests\WhatTheHellDidIRoll.Tests.csproj", "{59EF38B1-1C14-4BE6-821A-0F65B1704522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WhatTheHellDidIRoll.Tests", "WhatTheHellDidIRoll.Tests\WhatTheHellDidIRoll.Tests.csproj", "{59EF38B1-1C14-4BE6-821A-0F65B1704522}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
