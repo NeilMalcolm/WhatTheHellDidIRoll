@@ -3,9 +3,9 @@
 
 @page "/"
 
-<MudItem Class="d-flex align-center" xs="12" Style="height:100%;">
+<MudItem Class="d-flex align-center" Style="height:100%;">
 
-    <MudGrid Class="d-flex justify-center" Spacing="0">
+    <MudGrid Class="d-flex justify-center" Spacing="0" Style="max-height:100%;">
         <MudItem Class="d-flex flex-column"> 
             <MudItem>
                 <MudText Typo="Typo.h3" 
@@ -141,31 +141,31 @@
 
 @code {
 
-const string DefaultRollResultText = "<Roll Me>";
-private string _rollResultText = DefaultRollResultText;
-private Roll _roll = new(1, 1);
+    const string DefaultRollResultText = "<Roll Me>";
+    private string _rollResultText = DefaultRollResultText;
+    private Roll _roll = new(1, 1);
 
-private List<Tuple<string, Roll>> PreviousRolls { get; set; }
-    = new List<Tuple<string, Roll>>();
-    
-public bool IsPreviousRollsListHidden 
-    => PreviousRolls.Count == 0;
+    private List<Tuple<string, Roll>> PreviousRolls { get; set; }
+        = new List<Tuple<string, Roll>>();
 
-public void HandleSubmit()
-{
-    var newRoll = _roll.GetRoll()
-        .ToString();
+    public bool IsPreviousRollsListHidden 
+        => PreviousRolls.Count == 0;
 
-    _rollResultText = newRoll;
-    PreviousRolls.Insert
-    (
-        0,
-        new Tuple<string, Roll>(newRoll, new Roll (_roll.TensDice, _roll.UnitsDice))
-    );
-}
+    public void HandleSubmit()
+    {
+        var newRoll = _roll.GetRoll()
+            .ToString();
 
-public void ClearPreviousRolls()
-{
-    PreviousRolls = new List<Tuple<string, Roll>>(); 
-}
+        _rollResultText = newRoll;
+        PreviousRolls.Insert
+        (
+            0,
+            new Tuple<string, Roll>(newRoll, new Roll (_roll.TensDice, _roll.UnitsDice))
+        );
+    }
+
+    public void ClearPreviousRolls()
+    {
+        PreviousRolls = new List<Tuple<string, Roll>>(); 
+    }
 }
