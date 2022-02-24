@@ -1,6 +1,4 @@
-﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
-html, body {
+﻿html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100% !important;
     width: 100% !important;
@@ -136,6 +134,18 @@ h1:focus {
         margin-top: 30px;
         width: 100%;
         height: 475px;
+    }
+
+    h3 {
+        font-size: 24pt !important;
+        padding-top:20px;
+    }
+
+    h2 {
+        font-size: 32pt !important;
+    }
+    h5 {
+        font-size: 14pt !important;
     }
 }
 
